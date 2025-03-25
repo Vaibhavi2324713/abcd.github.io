@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d5d4d4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('bg2.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+body::after {
+    content: "Dream big, work hard, stay humble.";
+    position:relative;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.1);
+}
+.navbar {
+    background-color: #eaeaf1;
+    padding: 15px;
+    text-align: right;
+}
+
+.navbar a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color:#d2d3d4;
+    border-radius: 5px;
+}
+h2 {
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Page Title */
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.main
+{
+    margin-bottom: 30px; /* Adds space between sections */
+    padding: 15px;
+    background: rgb(234, 236, 235);
+    border-radius: 15px;
+    box-shadow: 5 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+/* Individual Skill Cards */
+.skill-card {
+    margin-bottom: 30px; /* Adds space between sections */
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Section Headings */
+.skill-card h2 {
+    font-size: 22px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-card h2 i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+/* Languages Section */
+.language-card {
+    background: linear-gradient(135deg, #efefef, #ffffff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    text-align: center;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(51, 51, 51, 0.15);
+}
+
+/* Languages Grid */
+.languages-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* Individual Language Block */
+.language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.language:hover {
+    transform: scale(1.1);
+}
+
+/* Flag Icons */
+.language img {
+    width: 150px;
+    height: 135px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(72, 52, 52, 0.2);
+}
+.image-gallery1 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.image-gallery1 img {
+    width: 200px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.image-gallery2 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.image-gallery2 img {
+    width: 300px;
+    height:fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(244, 29, 29, 0.2);
+}
+/* Language Name */
+.language span {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+}
+/* Coding Skills */
+.coding-card {
+    background: linear-gradient(to right, #efefef, #ffffff);
+}
+
+/* Progress Bars */
+.coding-skills {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #848484;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated Progress Bars */
+.progress {
+    height: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: fill 2s ease-in-out forwards;
+}
+
+@keyframes fill {
+    from { width: 0; }
+}
+
+.c-lang { background: linear-gradient(to right,#ff7700, #ffcb78); width: 75%; }
+.python { background: linear-gradient(to right,  #0099ff, #8ad0ff); width: 65%; }
+.html { background: linear-gradient(to right, #ff1900, #fd7c6e); width: 90%; }
+.css { background: linear-gradient(to right, #00ea61, #88ffba); width: 85%; }
+.linux { background: linear-gradient(to right, #b300ff, #da89fa); width: 78%; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+} 
