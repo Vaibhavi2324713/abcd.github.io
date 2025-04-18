@@ -1,193 +1,183 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body with Soft Background */
-body {
+  }
+  
+  html, body {
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f7f6; /* Light soft background */
-    color: #333;
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-}
-
-/* Header with Soft Gradient Background */
-header {
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* === Animated Gradient Background === */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #7aecee, #6792dc, #f7a6db, #f8febb);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* === Header === */
+  header {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #f3d0c9, #b8e0d8); /* Soft gradient for header */
-    color: #333;
-    padding: 20px 5%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-    font-size: 2.5rem;
-    font-weight: 700;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f2efdf;
     letter-spacing: 2px;
-}
-
-nav a {
-    color: #333;
+  }
+  
+  nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
     margin: 0 15px;
+    font-size: 1.1em;
     position: relative;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #0077b6;
-}
-
-nav a::after {
+    transition: all 0.3s ease;
+  }
+  
+  nav a::after {
     content: '';
     position: absolute;
-    width: 0;
     height: 2px;
-    background-color: #0077b6;
-    left: 0;
+    width: 0;
     bottom: -5px;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
+    left: 0;
+    background-color: #ffd700;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #e3dec5;
+  }
+  
+  nav a:hover::after {
     width: 100%;
-}
-
-/* Hero Section with Soothing Background and Full Image */
-.hero {
+  }
+  
+  /* === Hero Section === */
+  .hero {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 80px 5%;
-    background: rgba(255, 255, 255, 0.85); /* Light transparent background for contrast */
-    color: #333;
+    justify-content: center;
+    padding: 80px 40px;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h1 span {
+    color: #4a8f83;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.6em;
+    color: #595454;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text p {
+    font-size: 1.1em;
+    color: #666464;
+  }
+  
+  .hero-image {
+    flex: 1 1 250px;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    width: 450px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 35px;
-}
-
-.hero-text {
-    max-width: 50%;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #333;
-}
-
-.hero-text h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-top: 15px;
-    color: #0077b6; /* Soft blue color */
-}
-
-.hero-text p {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: #555; /* Softer text color */
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 500px; /* Make sure the image fits within the layout */
-    height: auto;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto; /* No cropping, the full image will appear */
-}
-
-/* Button Style */
-button {
-    background-color: #0077b6;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #005f8a;
-}
-
-/* Education Section with Soft Background */
-.education {
-    background-color: #e0f7fa; /* Soft light blue background */
-    color: #333;
-    padding: 50px 5%;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-
-.education h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #0077b6;
-    margin-bottom: 20px;
-}
-
-.education-details p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding: 0 3%;
-    }
-
+    border: 5px solid #857f7f;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* === Education Section === */
+  .education {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    padding: 60px 40px;
+    text-align: left;
+    padding: 10px;
+    border: 10px;
+  }
+  
+  .education h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2e2b2b;
+  }
+  
+  .education-details {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: #161616;
+  }
+  
+  .education-details p {
+    margin-bottom: 10px;
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
+      flex-direction: column;
+      align-items: left;
     }
-
-    header .logo {
-        margin-bottom: 15px;
-    }
-
+  
     nav {
-        margin-top: 20px;
+      margin-top: 10px;
     }
-
-    nav a {
-        margin: 0 10px;
-    }
-
+  
     .hero {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      padding: 40px 20px;
     }
-
-    .hero-image {
-        width: 100%;
-        max-width: 300px; /* Scale image down for smaller screens */
+  
+    .hero-image img {
+      width: 280px;
     }
-
+  
+    .hero-text h1 {
+      font-size: 2em;
+    }
+  
     .hero-text h2 {
-        font-size: 2.5rem;
+      font-size: 1.2em;
     }
-
-    .hero-text h3 {
-        font-size: 1.4rem;
-    }
-
-    .education h2 {
-        font-size: 2rem;
-    }
-}
+  }
+  
